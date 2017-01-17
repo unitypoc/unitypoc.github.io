@@ -3435,20 +3435,20 @@ if (typeof window.onerror != 'function')
         didShowErrorMessage = true;
         if (err.indexOf("DISABLE_EXCEPTION_CATCHING") != -1)
         {
-            alert ("An exception has occurred, but exception handling has been disabled in this build. If you are the developer of this content, enable exceptions in your project's WebGL player settings to be able to catch the exception or see the stack trace.");
+            console.log ("An exception has occurred, but exception handling has been disabled in this build. If you are the developer of this content, enable exceptions in your project's WebGL player settings to be able to catch the exception or see the stack trace.");
             return;
         }
         if (err.indexOf("Cannot enlarge memory arrays") != -1)
         {
-            alert ("Out of memory. If you are the developer of this content, try allocating more memory to your WebGL build in the WebGL player settings.");
+            console.log ("Out of memory. If you are the developer of this content, try allocating more memory to your WebGL build in the WebGL player settings.");
             return;        
         }
         if (err.indexOf("Invalid array buffer length") != -1  || err.indexOf("Invalid typed array length") != -1 || err.indexOf("out of memory") != -1)
         {
-            alert ("The browser could not allocate enough memory for the WebGL content. If you are the developer of this content, try allocating less memory to your WebGL build in the WebGL player settings.");
+            console.log ("The browser could not allocate enough memory for the WebGL content. If you are the developer of this content, try allocating less memory to your WebGL build in the WebGL player settings.");
             return;                
         }
-        alert ("An error occurred running the Unity content on this page. See your browser's JavaScript console for more info. The error was:\n"+err);
+        console.log ("An error occurred running the Unity content on this page. See your browser's JavaScript console for more info. The error was:\n"+err);
     }
     
     Error.stackTraceLimit = 50;
@@ -3751,6 +3751,6 @@ Module['FS_createPath']('/Managed/mono', '2.0', true, true);
   }
 
  }
- loadPackage({"files": [{"audio": 0, "start": 0, "crunched": 0, "end": 2610227, "filename": "/data.unity3d"}, {"audio": 0, "start": 2610227, "crunched": 0, "end": 2610610, "filename": "/methods_pointedto_by_uievents.xml"}, {"audio": 0, "start": 2610610, "crunched": 0, "end": 2614324, "filename": "/preserved_derived_types.xml"}, {"audio": 0, "start": 2614324, "crunched": 0, "end": 5182900, "filename": "/Il2CppData/Metadata/global-metadata.dat"}, {"audio": 0, "start": 5182900, "crunched": 0, "end": 5917048, "filename": "/Resources/unity_default_resources"}, {"audio": 0, "start": 5917048, "crunched": 0, "end": 5944673, "filename": "/Managed/mono/2.0/machine.config"}], "remote_package_size": 5944673, "package_uuid": "9cf2abf0-b9f3-40af-9336-8c2173181e6e"});
+ loadPackage({"files": [{"audio": 0, "start": 0, "crunched": 0, "end": 2610227, "filename": "/data.unity3d"}, {"audio": 0, "start": 2610227, "crunched": 0, "end": 2610610, "filename": "/methods_pointedto_by_uievents.xml"}, {"audio": 0, "start": 2610610, "crunched": 0, "end": 2614324, "filename": "/preserved_derived_types.xml"}, {"audio": 0, "start": 2614324, "crunched": 0, "end": 5182900, "filename": "/Il2CppData/Metadata/global-metadata.dat"}, {"audio": 0, "start": 5182900, "crunched": 0, "end": 5917048, "filename": "/Resources/unity_default_resources"}, {"audio": 0, "start": 5917048, "crunched": 0, "end": 5944673, "filename": "/Managed/mono/2.0/machine.config"}], "remote_package_size": 5944673, "package_uuid": "4af27c7e-55eb-4c89-a657-afbb71e80c2a"});
 
 })();
